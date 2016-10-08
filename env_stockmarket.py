@@ -75,13 +75,8 @@ class Stock_agent():
         
 
     def calcstocks(self,money, price):
-        i = 0
-        _sum = 0
-        while _sum <= money:
-            i = i + 1
-            _sum = 100 * price * i
-            
-        return 100 * (i - 1)
+       
+        return np.floor(money/price)
     
     def trading(self,term, price, traindata):
         #print term
